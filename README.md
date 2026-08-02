@@ -16,6 +16,14 @@ Public, reproducible operations record for a Celestia Mocha light node.
 
 The node follows the live network head, performs Data Availability Sampling (DAS), and catches up its local header store. At the first published snapshot it was connected to 20 peers and the health check passed.
 
+## Public operating record
+
+- [Status history](status/node-status.csv)
+- [Latest status](status/latest-status.txt)
+- [Validation workflow](.github/workflows/validate-status.yml)
+
+The Windows publisher exports the sanitized status record once per day. The repository therefore records operations over time instead of presenting a one-time claim.
+
 ## Operations design
 
 - systemd process supervision and automatic restart
@@ -45,3 +53,7 @@ The public Peer ID identifies the libp2p node, but it is not a wallet address, v
 - [Light node quick start](https://docs.celestia.org/operate/data-availability/light-node/quickstart/)
 - [Install celestia-node](https://docs.celestia.org/operate/data-availability/install-celestia-node/)
 - [v0.31.4-mocha release](https://github.com/celestiaorg/celestia-node/releases/tag/v0.31.4-mocha)
+
+## License
+
+MIT. See [LICENSE](LICENSE).

@@ -1,0 +1,23 @@
+name: Validate public status
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate status schema and public-data boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(head -n 1 status/node-status.csv)" = "timestamp,service,local_height,network_height,lag,peers,disk_bytes"
+          tail -n +2 status/node-status.csv | awk -F, 'NF != 7 { exit 1 } $3 !~ /^[0-9]+$/ || $4 !~ /^[0-9]+$/ || $5 !~ /^[0-9]+$/ || $6 !~ /^[0-9]+$/ || $7 !~ /^[0-9]+$/ { exit 1 }'
+          if grep -Eiq 'mnemonic|seed phrase|private.?key|auth.?token|password|secret|bearer' status/node-status.csv status/latest-status.txt; then echo 'Sensitive pattern found in status exports'; exit 1; fi
+          test -s status/latest-status.txt

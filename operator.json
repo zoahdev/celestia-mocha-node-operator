@@ -1,0 +1,15 @@
+{
+  "network": "celestia-mocha-4",
+  "node_type": "data-availability-light-node",
+  "software": "celestia-node",
+  "version": "v0.31.4-mocha",
+  "peer_id": "12D3KooWHAEjYnCRCyrsb4yB3j1zBPaYAsAXPTui8xtDBb5vrStB",
+  "runtime": "Ubuntu 24.04 on WSL2",
+  "operations": {
+    "process_supervision": "systemd",
+    "health_check_interval": "5m",
+    "public_status_publisher": "daily",
+    "rpc_exposure": "localhost-only"
+  },
+  "claims_boundary": "Testnet light-node operations record; not a validator identity, governance right, uptime guarantee, or earnings promise."
+}
