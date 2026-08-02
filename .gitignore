@@ -1,0 +1,9 @@
+# Never publish node identity material, tokens, or local runtime state.
+keys/
+*.key
+*.pem
+*.token
+.env
+auth-token
+config.toml
+data/
