@@ -23,6 +23,7 @@ The node follows the live network head, performs Data Availability Sampling (DAS
 - [Status history](status/node-status.csv)
 - [Latest status](status/latest-status.txt)
 - [Validation workflow](.github/workflows/validate-status.yml)
+- [Public status page](https://zoahdev.github.io/celestia-mocha-node-operator/)
 
 The Windows publisher exports the sanitized status record once per day. The repository therefore records operations over time instead of presenting a one-time claim.
 
