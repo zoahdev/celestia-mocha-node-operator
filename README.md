@@ -2,6 +2,8 @@
 
 Public, reproducible operations record for a Celestia Mocha light node.
 
+[![Validate public status](https://github.com/zoahdev/celestia-mocha-node-operator/actions/workflows/validate-status.yml/badge.svg)](https://github.com/zoahdev/celestia-mocha-node-operator/actions/workflows/validate-status.yml) [![Operator release](https://img.shields.io/github/v/release/zoahdev/celestia-mocha-node-operator?sort=semver)](https://github.com/zoahdev/celestia-mocha-node-operator/releases)
+
 ## Current deployment
 
 | Item | Value |
