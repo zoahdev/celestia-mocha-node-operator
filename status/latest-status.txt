@@ -1,7 +1,7 @@
-timestamp=2026-08-03T00:12:19+08:00
+timestamp=2026-08-03T10:49:12+08:00
 service=active
-local_height=13325002
-network_height=13470539
-lag=145537
+local_height=13484322
+network_height=13484322
+lag=0
 peers=21
-disk_bytes=2182188216
+disk_bytes=5492352928
